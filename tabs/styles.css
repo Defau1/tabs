@@ -1,0 +1,49 @@
+body {
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+}
+
+.tabs label {
+    order: 1;
+    display: block;
+    padding: 10px 15px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: rgb(36, 201, 63);
+    font-weight: bold;
+    transition: background ease 0.3;
+}
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked
++label {
+    background: #fff;
+}
+
+.tabs input[type="radio"]:checked
++label + .tab {
+    display: block;
+}
